@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prediction</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+  <div class="logo">SEED</div>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a class="active" href="/predict">Check</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+
+<div class="breadcrumb">
+  Home / <b>Predict</b>
+  <h2>Prediction</h2>
+</div>
+
+<div class="prediction-wrapper">
+
+  <div class="left-panel">
+    {% if prediction_text %}
+    <div class="result-card">
+      <h3>Result</h3>
+      <p>{{ prediction_text }}</p>
+    </div>
+    {% else %}
+<div class="form-card">
+  <h3>Enter the details:</h3>
+
+  <form action="/predict" method="POST">
+
+    <label>Area</label>
+    <input name="Area" placeholder="Expected range: 15000 – 30000" required>
+
+    <label>Perimeter</label>
+    <input name="Perimeter" placeholder="Expected range: 250 – 450" required>
+
+    <label>Major Axis Length</label>
+    <input name="Major_Axis_Length" placeholder="Expected range: 700 – 900" required>
+
+    <label>Minor Axis Length</label>
+    <input name="Minor_Axis_Length" placeholder="Expected range: 300 – 600" required>
+
+    <label>Eccentricity</label>
+    <input name="Eccentricity" placeholder="Expected range: 0 – 1" required>
+
+    <label>Convex Area</label>
+    <input name="Convex_Area" placeholder="Expected range: 15000 – 31000" required>
+
+    <label>Equiv Diameter</label>
+    <input name="Equiv_Diameter" placeholder="Expected range: 120 – 200" required>
+
+    <label>Solidity</label>
+    <input name="Solidity" placeholder="Expected range: 0 – 1" required>
+
+    <label>Extent</label>
+    <input name="Extent" placeholder="Expected range: 0 – 1" required>
+
+    <label>Roundness</label>
+    <input name="Roundness" placeholder="Expected range: 0 – 1" required>
+
+    <label>Aspect Ratio</label>
+    <input name="Aspect_Ratio" placeholder="Expected range: 0 – 3" required>
+
+    <label>Compactness</label>
+    <input name="Compactness" placeholder="Expected range: 0 – 1" required>
+
+    <button type="submit" class="btn submit">Submit</button>
+  </form>
+</div>
+    {% endif %}
+  </div>
+
+  {% if prediction_text %}
+  <div class="right-panel">
+    <img src="{{ url_for('static', filename='images/seed.jpg') }}">
+  </div>
+  {% endif %}
+
+</div>
+</body>
+</html>

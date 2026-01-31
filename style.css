@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+}
+
+.navbar {
+  background: #000;
+  color: #fff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.nav-links .active {
+  border-bottom: 2px solid red;
+}
+
+.hero {
+  height: 90vh;
+  background: url('../images/seed.jpg') center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 40px 50px;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.badge {
+  background: #ffc107;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  margin: 15px 0;
+}
+
+.hero-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #ffc107;
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit {
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  margin-top: 20px;
+}
+
+.breadcrumb {
+  padding: 20px 40px;
+  background: #f1f1f1;
+}
+
+.breadcrumb h2 {
+  margin-top: 5px;
+}
+
+.prediction-wrapper {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+
+.left-panel,
+.right-panel {
+  flex: 1;
+}
+
+.right-panel img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+.form-card,
+.result-card {
+  background: #fff;
+  padding: 28px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+.form-card h3 {
+  margin-bottom: 15px;
+}
+
+.form-card label {
+  margin-top: 14px;
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-card input {
+  width: 100%;
+  height: 42px;
+  padding: 8px 12px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #eef4ff;
+  font-size: 14px;
+}
+
+.form-card input::placeholder {
+  color: #9aa0a6;
+  font-size: 13px;
+}
+
+.result-card h3 {
+  margin-bottom: 10px;
+}
